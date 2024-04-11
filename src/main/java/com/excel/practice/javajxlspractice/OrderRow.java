@@ -1,6 +1,5 @@
 package com.excel.practice.javajxlspractice;
 
-import org.springframework.context.annotation.Bean;
 
 public class OrderRow {
     private Integer orderId; //訂單序號

@@ -1,5 +1,6 @@
 package com.excel.practice.javajxlspractice;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,8 +12,8 @@ public class OrdersController {
     private OrdersService ordersService;
 
     @GetMapping("/")
-    public String exportOrder(){
-        ordersService.exportOrder();
+    public String exportOrder(HttpServletResponse response){
+        ordersService.exportOrder(response);
         return "訂單明細產出完成~";
     }
 }
